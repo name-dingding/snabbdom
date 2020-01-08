@@ -36,7 +36,6 @@ export function jsx (tag: string | FunctionComponent, props: JsxVNodeProps | nul
     // append sel css selector to tag to support equivalent of h('span.foo.bar')
     if (props && props.sel) {
       tag += props.sel;
-      delete props.sel;
     }
     if (flatChildren.length == 1 && !flatChildren[0].sel && flatChildren[0].text) {
       // only child is a simple text node, pass as text for a simpler vtree
